@@ -1,0 +1,2 @@
+# boto3 with secret manager support
+boto3 >= 1.7.27
