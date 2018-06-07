@@ -1,0 +1,7 @@
+deploy:
+  provider: pypi
+  user: sepulword
+  password:
+    secure: FeigvU+YvIOYK8lwJbH+Jf57Ft4gMygr6yYXEgg3nTgYcEuCx0TS/Xo2NMWvln26J0kzpLv5XgM754YUhzcfLcKGceDBayTGr3+giFfYCtyGKh6Asfc971/N3EjfLInKpDmCnyALARg17pgwrIZcUrXcl+mXiIuEC0u0fzkDtr7AjXSw0GQmkDUI2GAwY5+c/USwxbaPNhJq63be4puay+W/v8j2Enj9bhtS6rTuSV5U368igvsomjpGC+LIFBRvyBE4IdsNtf3uzeCF7okUHre1GHj9mihOGLxaDxQ3wiEvro9DdIaTCpKz+9mmouLrnHmHGkHXjb73X8ESU2bm5kvyzZXiHJKGBUTCqNYcq3etqK8vRXan/ap9LMxZUeIohg7S+V8tD+9Fu8fTsV4m5U42Ux/tXUqn0oU1lCuwgT+mRYTpSZ33F87onP+sJCeDy8nS5EoeE8/NhaKi7AiIIQiKTMp32kVKaRHbM8zWrxiQJ4J4Uf/uo599jgauB9faCXj6iVLiEPf5PtZ8Fu2ncvJfULqBduWdXZkkUOJSJF56xK0uNpXVTCe20/Fj+85KCNSp9w1pAou3+pLsKLQ/n/UBjD3tIWBa2DfYzIvQBFiPqLcobKRCpLC20JrrUJslRgHtvc7sL1holz1Gond5B3MlbNLF0syZ7iT+hFSO80o=
+  on:
+    tags: true

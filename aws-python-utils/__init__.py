@@ -1,1 +1,1 @@
-from .aws-secret-manager import *
+from .secretmanager import *
