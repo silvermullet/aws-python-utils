@@ -2,6 +2,12 @@
 
 Simplify use of AWS resources in your code with aws-python-utils
 
+### Install
+
+```
+pip install aws-python-util
+```
+
 ### AwsSecretManager
 
 ##### get_secret()
