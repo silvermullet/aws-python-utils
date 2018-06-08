@@ -1,4 +1,7 @@
 deploy:
+  language: python
+  python:
+    - "3.6"
   provider: pypi
   user: sepulword
   password:
