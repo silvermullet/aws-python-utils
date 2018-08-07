@@ -8,7 +8,8 @@ Simplify use of AWS resources in your code with aws-python-utils
 pip install aws-python-util
 ```
 
-### AwsSecretManager
+### SecretManager Util
+* Easy secret retrieval
 
 ##### get_secret()
 
@@ -17,22 +18,22 @@ Use ENVIRONMENT variable "AWS_SECRET_MANAGER_SECRET" or pass in secret_key name.
 ###### Example Usage
 
 Via ENVIRONMENT variable
-```
-In [1]: import os
-In [2]: import secretmanager
-In [3]: os.environ["AWS_SECRET_MANAGER_SECRET"] = "mysecret"
-In [4]: secretmanager = secretmanager.AwsSecretManager()
-In [5]: secretmanager.get_secret()
-Out[5]: 'supersecretpass'
+```python
+from aws_python_utils import secretmanager
+import os
+
+os.environ["AWS_SECRET_MANAGER_SECRET"] = "mysecret"
+secretmanager = secretmanager.AwsSecretManager()
+mysecret = secretmanager.get_secret()
 ```
 
 Or pass in secret_key name ..
-```
-In [1]: import os
-In [2]: import secretmanager
-In [3]: secretmanager = secretmanager.AwsSecretManager()
-In [4]: secretmanager.get_secret(secret_key="mysecret")
-Out[4]: 'supersecretpass'
+```python
+from aws_python_utils import secretmanager
+import os
+
+secretmanager = secretmanager.AwsSecretManager()
+mysecret = secretmanager.get_secret(secret_key="mysecret")
 ```
 
 ### S3 Util
