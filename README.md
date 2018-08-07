@@ -5,7 +5,7 @@ Simplify use of AWS resources in your code with aws-python-utils
 ### Install
 
 ```
-pip install aws_python_util
+pip install aws-python-util
 ```
 
 ### AwsSecretManager

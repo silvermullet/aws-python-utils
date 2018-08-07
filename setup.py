@@ -14,7 +14,7 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = 'aws_python_utils'
 DESCRIPTION = 'Simplify use of AWS resources in your code with aws-python-utils'
-URL = 'https://github.com/sepulworld/aws-python-utils'
+URL = 'https://github.com/silvermullet/aws-python-utils'
 EMAIL = 'zane.williamson@gmail.com'
 AUTHOR = 'Zane Williamson'
 REQUIRES_PYTHON = '>=3.6.0'
