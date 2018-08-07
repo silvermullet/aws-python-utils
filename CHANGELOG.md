@@ -4,7 +4,7 @@ This file is used to list changes made in each version of aws-python-utils.
 
 ## unreleased
 
-## 0.0.4 (2018-08-06)
+## 0.0.5 (2018-08-06)
 - [Zane Williamson] - Adding pandas requirement
 
 ## 0.0.3 (2018-08-06)
