@@ -12,7 +12,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'aws-python-utils'
+NAME = 'aws_python_utils'
 DESCRIPTION = 'Simplify use of AWS resources in your code with aws-python-utils'
 URL = 'https://github.com/sepulworld/aws-python-utils'
 EMAIL = 'zane.williamson@gmail.com'
