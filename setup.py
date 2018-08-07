@@ -22,7 +22,8 @@ VERSION = None
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'boto3'
+    'boto3',
+    'pandas'
 ]
 
 # The rest you shouldn't have to touch too much :)
