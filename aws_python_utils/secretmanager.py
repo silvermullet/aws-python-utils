@@ -2,6 +2,7 @@ import boto3
 import os
 from botocore.exceptions import ClientError
 
+
 class AwsSecretManager():
     """AWS Secret Manager class"""
 
@@ -10,7 +11,7 @@ class AwsSecretManager():
                    endpoint_url="https://secretsmanager.us-west-2.amazonaws.com",
                    region_name="us-west-2"):
         """AWS secret get_secret"""
-        
+
         if secret_key == None:
             self.secret_key = os.environ.get("AWS_SECRET_MANAGER_SECRET", None)
         else:
