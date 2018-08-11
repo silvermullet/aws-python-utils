@@ -12,7 +12,7 @@ class AwsS3():
         self.s3_client = self.session.client("s3")
         self.LOG = logger.getLogger("S3Util")
 
-    def get_bucket_and_key_from_s3_path(s3_path):
+    def get_bucket_and_key_from_s3_path(self, s3_path):
         """returns tuple representing (bucket,key)"""
         res = re.search("s3://(.*?)/(.*)", s3_path)
         if not res:
@@ -23,7 +23,7 @@ class AwsS3():
 
         return res.group(1),res.group(2)
 
-    def download_s3_file(s3_path, header=None, sep=',', dtype=None, index=None):
+    def download_s3_file(self, s3_path, header=None, sep=',', dtype=None, index=None):
         """returns a panda DataFrame"""
         self.LOG.info("downloading %s" % s3_path)
         bucket,key = self.get_bucket_and_key_from_s3_path(s3_path)
@@ -34,7 +34,7 @@ class AwsS3():
 
         return df
 
-    def upload_to_s3(s3_out_path, io_buffer):
+    def upload_to_s3(self, s3_out_path, io_buffer):
         """uploads contents in io_buffer.  should be instance of StringIO()"""
         self.LOG.info("uploading to %s" % s3_out_path)
         bucket,key = self.get_bucket_and_key_from_s3_path(s3_out_path)
