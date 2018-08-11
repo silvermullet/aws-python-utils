@@ -35,7 +35,7 @@ class AwsS3():
         return df
 
     def upload_to_s3(self, s3_out_path, io_buffer):
-        """uploads contents in io_buffer.  should be instance of StringIO()"""
+        """uploads contents in io_buffer.  should be instance of BytesIO()"""
         self.LOG.info("uploading to %s" % s3_out_path)
         bucket,key = self.get_bucket_and_key_from_s3_path(s3_out_path)
         self.s3_client.put_object(Bucket=bucket, Key=key, Body=io_buffer.getvalue())
