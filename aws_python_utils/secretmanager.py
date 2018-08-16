@@ -20,7 +20,7 @@ class AwsSecretManager():
             )
         self.LOG = logger.getLogger("SecretManagerUtil")
 
-    def get_secret(self, secret_key=None, endpoint_url, region_name):
+    def get_secret(self, secret_key=None, endpoint_url=None, region_name=None):
         """AWS secret get_secret"""
 
         if secret_key == None:
