@@ -4,6 +4,9 @@ This file is used to list changes made in each version of aws-python-utils.
 
 ## unreleased
 
+## 0.0.7 (2018-08-16)
+- [Chad Timmins] - Adding ec2 utils with amicleaner
+
 ## 0.0.5 (2018-08-06)
 - [Zane Williamson] - Adding pandas requirement
 
