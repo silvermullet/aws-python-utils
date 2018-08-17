@@ -61,3 +61,17 @@ df2.to_csv(io_buffer, columns=['a', 'c', 'e'], sep='\t', index=False)
 
 s3.AwsS3.upload_to_s3("s3://your-bucket/path/to/object.tsv", io_buffer)
 ```
+
+### EC2 Util
+* Ami cleaner to mop up old ami's
+
+###### Example Usage
+```python
+from aws_python_utils.ec2 import AwsEC2
+from datetime import datetime
+
+ec2 = AwsEC2()
+# keep latest 5 ami'
+ec2.clean_images("my-service-ami-dev-*", num_to_keep=5, cutoff_date=datetime(2018, 8, 1), images_to_keep=['ami-keepmeid'])
+
+```
