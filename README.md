@@ -42,24 +42,27 @@ mysecret = secretmanager.get_secret(secret_key="mysecret")
 
 ###### Example Usage
 ```python
-from aws_python_utils import s3
+from aws_python_utils.s3 import AwsS3
 from io import BytesIO
 import pandas as pd
 import numpy as np
 
-bucket,key = s3.AwsS3.get_bucket_and_key_from_s3_path("s3://my-bucket/mypath/to/object")
+
+s3 = AwsS3()
+
+bucket,key = s3.get_bucket_and_key_from_s3_path("s3://my-bucket/mypath/to/object")
 
 print("bucket = " + bucket)  # my-bucket
 print("key = " + key)        # mypath/to/object
 
 # download a tab separated file schema: id    val1  val2
-df = s3.AwsS3.download_s3_file(s3_path, header=0, sep='\t', index='id')
+df = s3.download_s3_file(s3_path, header=0, sep='\t', index='id')
 
 df2 = pd.DataFrame(np.random.randint(low=0, high=10, size=(5, 5)), columns=['a', 'b', 'c', 'd', 'e'])
 io_buffer = BytesIO()
 df2.to_csv(io_buffer, columns=['a', 'c', 'e'], sep='\t', index=False)
 
-s3.AwsS3.upload_to_s3("s3://your-bucket/path/to/object.tsv", io_buffer)
+s3.upload_to_s3("s3://your-bucket/path/to/object.tsv", io_buffer)
 ```
 
 ### EC2 Util
